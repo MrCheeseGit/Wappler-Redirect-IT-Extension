@@ -1,0 +1,77 @@
+{
+  type: 'redirectit_page'
+  module: 'redirectit'
+  action: 'page'
+  groupTitle: 'Mr Cheese'
+  groupIcon: 'fas fa-lg fa-cheese comp-exec'
+  title: 'Redirect To Page'
+  icon: 'fas fa-lg fa-sign-out-alt comp-flows'
+  serverModel: ['node']
+  endStep: true
+
+  help: 'Server-side redirect to a project page from routes.json. Use in any Server Action or Condition branch. Requires dmx-browser (id="browser") in your layout. Copy redirectit_nav.js to extensions/server_connect/routes/ for API auto-navigation — no form Success handlers.'
+
+  properties: [
+    {
+      group: 'Redirect'
+      variables: [
+        {
+          name: 'actionName'
+          optionName: 'name'
+          title: 'Name'
+          type: 'text'
+          required: true
+          defaultValue: ''
+          baseName: 'redirect'
+        }
+        {
+          name: 'destinationMode'
+          optionName: 'mode'
+          title: 'Destination'
+          type: 'droplist'
+          defaultValue: 'page'
+          values: [
+            {title: 'Project page', value: 'page', show: ['page'], hide: ['url']}
+            {title: 'Custom URL', value: 'url', show: ['url'], hide: ['page']}
+          ]
+          help: 'Pick a page from routes.json, or bind a dynamic path'
+        }
+        {
+          name: 'page'
+          optionName: 'page'
+          title: 'Page'
+          type: 'file'
+          required: true
+          requiredField: 'mode'
+          requiredFieldValue: 'page'
+          routePicker: true
+          serverDataBindings: true
+          defaultValue: ''
+          help: 'Select a page route from your project (routes.json)'
+        }
+        {
+          name: 'url'
+          optionName: 'url'
+          title: 'URL'
+          type: 'text'
+          required: true
+          requiredField: 'mode'
+          requiredFieldValue: 'url'
+          serverDataBindings: true
+          defaultValue: ''
+          initDisplay: 'none'
+          help: 'Path or full URL — useful inside conditions with {{bindings}}'
+        }
+        {
+          name: 'query'
+          optionName: 'query'
+          title: 'Query string'
+          type: 'text'
+          serverDataBindings: true
+          defaultValue: ''
+          help: 'Optional suffix: lang=en or ?lang=en'
+        }
+      ]
+    }
+  ]
+}
