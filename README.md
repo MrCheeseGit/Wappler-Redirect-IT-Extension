@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Wappler](https://img.shields.io/badge/Wappler-Server%20Connect-teal)
-![Version](https://img.shields.io/badge/version-1.0.0-green)
+![Version](https://img.shields.io/badge/version-1.0.1-green)
 
 Built by **[Mr Cheese](https://www.mrcheese.co.uk)** · Wappler extensions & custom modules
 

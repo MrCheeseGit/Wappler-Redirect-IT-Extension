@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 — 2026-06-04
+
+- **Fix:** Page field no longer auto-fills with the currently open route when cleared and saved — removed Wappler `required` on the `routePicker` field (runtime validation unchanged)
+
 ## 1.0.0 — 2026-06-04
 
 - **Redirect To Page** — Server Connect step under Mr Cheese with a **Page** picker from `routes.json`

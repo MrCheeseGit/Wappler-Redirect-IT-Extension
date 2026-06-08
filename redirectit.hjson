@@ -41,26 +41,20 @@
           optionName: 'page'
           title: 'Page'
           type: 'file'
-          required: true
-          requiredField: 'mode'
-          requiredFieldValue: 'page'
           routePicker: true
           serverDataBindings: true
           defaultValue: ''
-          help: 'Select a page route from your project (routes.json)'
+          help: 'Select a page route from routes.json (required when the action runs)'
         }
         {
           name: 'url'
           optionName: 'url'
           title: 'URL'
           type: 'text'
-          required: true
-          requiredField: 'mode'
-          requiredFieldValue: 'url'
           serverDataBindings: true
           defaultValue: ''
           initDisplay: 'none'
-          help: 'Path or full URL — useful inside conditions with {{bindings}}'
+          help: 'Path or full URL — useful inside conditions with {{bindings}}. Validated at runtime when the action runs.'
         }
         {
           name: 'query'
