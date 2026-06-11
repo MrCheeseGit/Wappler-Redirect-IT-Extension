@@ -21,18 +21,28 @@ Built by **[Mr Cheese](https://www.mrcheese.co.uk)** · Wappler extensions & cus
 
 ## Requirements
 
-### `dmx-browser` in your layout (required)
+### Wappler Browser component in your layout (required)
 
-Redirect-IT navigates via Wappler’s **Browser** component. Your main layout **must** include:
+Redirect-IT navigates via Wappler’s **Browser** App Connect component.
+
+**In Wappler:**
+
+1. Open your main **layout** (or the content page that wraps your app).
+2. From **App Connect**, add the **Browser** component.
+3. In Properties, set **ID** to `browser`.
+
+Do **not** paste `<div is="dmx-browser">` into the HTML by hand — that omits the scripts and includes Wappler adds when you drop the component from the panel. The designer output will include something like:
 
 ```html
 <div is="dmx-browser" id="browser"></div>
 ```
 
-- **`id="browser"`** is required — the auto-injected listener calls `dmx.app.find('browser').goto(url)`.
-- Add this once in your layout; you do **not** add Redirect-IT scripts to individual pages.
+plus the App Connect script tags it needs.
 
-If `dmx-browser` is missing, redirects from API calls will not navigate the user.
+- **`id="browser"`** is required — the auto-injected listener calls `dmx.app.find('browser').goto(url)`.
+- Add the Browser component once in your layout; you do **not** add Redirect-IT scripts to individual pages.
+
+If the Browser component is missing, redirects from API calls will not navigate the user.
 
 ---
 
@@ -61,7 +71,7 @@ cp redirectit.js        [PROJECT]/extensions/server_connect/modules/redirectit.j
 cp redirectit_nav.js    [PROJECT]/extensions/server_connect/routes/redirectit_nav.js
 ```
 
-1. Ensure your layout has **`dmx-browser`** with **`id="browser"`** (see [Requirements](#requirements)).
+1. Add the **Browser** component to your layout in Wappler and set **ID** to `browser` (see [Requirements](#requirements)).
 2. **Quit Wappler completely and restart.**
 
 The action appears under **Mr Cheese → Redirect To Page**.

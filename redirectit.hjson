@@ -9,7 +9,7 @@
   serverModel: ['node']
   endStep: true
 
-  help: 'Server-side redirect to a project page from routes.json. Use in any Server Action or Condition branch. Requires dmx-browser (id="browser") in your layout. Copy redirectit_nav.js to extensions/server_connect/routes/ for API auto-navigation — no form Success handlers.'
+  help: 'Server-side redirect to a project page from routes.json. Use in any Server Action or Condition branch. Requires Wappler Browser component (id="browser") in your layout — add via App Connect designer, not pasted HTML. Copy redirectit_nav.js to extensions/server_connect/routes/ for API auto-navigation — no form Success handlers.'
 
   properties: [
     {
