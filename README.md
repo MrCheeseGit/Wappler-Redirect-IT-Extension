@@ -64,6 +64,12 @@ You install the extension files once. No layout scripts. No per-form events.
 
 ## Installation
 
+### Mr Cheese Extension Installer (recommended)
+
+This repo ships **`wappler-install.json`** at the root — copy paths, folders, and post-install notes for the [Mr Cheese Extension Installer](https://www.mrcheese.co.uk/extensions/install). Select **Redirect-IT**, keep **Use wappler-install.json from the repository** enabled, enter your project path, and run the generated script locally.
+
+Manual install:
+
 ```bash
 cp redirectit.hjson     [PROJECT]/extensions/server_connect/modules/
 cp redirectit.js        [PROJECT]/lib/modules/
