@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "id": "redirect-it",
+  "name": "Redirect-IT",
+  "version": "1.0.1",
+  "cloneDir": "Wappler-Redirect-IT-Extension",
+  "hasServerConnect": true,
+  "hasAppConnect": false,
+  "readme": "https://github.com/MrCheeseGit/Wappler-Redirect-IT-Extension#installation",
+  "serverConnect": {
+    "directories": [
+      "extensions/server_connect/modules",
+      "extensions/server_connect/routes",
+      "lib/modules"
+    ],
+    "copy": [
+      { "src": "redirectit.hjson", "dest": "extensions/server_connect/modules/redirectit.hjson" },
+      { "src": "redirectit.js", "dest": "lib/modules/redirectit.js" },
+      { "src": "redirectit.js", "dest": "extensions/server_connect/modules/redirectit.js" },
+      { "src": "redirectit_nav.js", "dest": "extensions/server_connect/routes/redirectit_nav.js" }
+    ],
+    "notes": [
+      "In Wappler, open your main layout and add the App Connect Browser component from the Design panel (do not paste the div by hand — the designer adds the required scripts).",
+      "Set the Browser component ID to browser — Redirect-IT calls dmx.app.find('browser').goto().",
+      "Quit Wappler completely and restart."
+    ]
+  }
+}
