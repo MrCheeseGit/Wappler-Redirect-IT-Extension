@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.6
+## 1.0.7
 
 Current release of **Redirect IT**. See [README](README.md) for features, installation, and usage.
 
