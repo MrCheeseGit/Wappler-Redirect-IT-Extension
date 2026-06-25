@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "$_POST": [
+      { "type": "text", "name": "email" },
+      { "type": "text", "name": "password" }
+    ]
+  },
+  "exec": {
+    "steps": [
+      {
+        "name": "identity",
+        "module": "auth",
+        "action": "login",
+        "options": {
+          "provider": "your_security_provider"
+        },
+        "output": true,
+        "outputType": "object"
+      },
+      {
+        "name": "",
+        "module": "core",
+        "action": "condition",
+        "options": {
+          "if": "{{identity.role == 'admin'}}",
+          "then": {
+            "steps": {
+              "name": "redirect",
+              "module": "redirectit",
+              "action": "page",
+              "options": {
+                "mode": "page",
+                "page": "/admin/dashboard"
+              }
+            }
+          },
+          "else": {
+            "steps": {
+              "name": "redirect",
+              "module": "redirectit",
+              "action": "page",
+              "options": {
+                "mode": "page",
+                "page": "/portal/home"
+              }
+            }
+          }
+        },
+        "outputType": "boolean"
+      }
+    ]
+  }
+}

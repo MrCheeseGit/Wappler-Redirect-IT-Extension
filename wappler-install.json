@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "id": "redirect-it",
+  "name": "Redirect-IT",
+  "version": "1.0.5",
+  "cloneDir": "Wappler-Redirect-IT-Extension",
+  "hasServerConnect": true,
+  "hasAppConnect": false,
+  "readme": "https://github.com/MrCheeseGit/Wappler-Redirect-IT-Extension#installation",
+  "serverConnect": {
+    "directories": [
+      "extensions/server_connect/modules",
+      "extensions/server_connect/routes",
+      "lib/modules"
+    ],
+    "copy": [
+      {
+        "src": "redirectit.hjson",
+        "dest": "extensions/server_connect/modules/redirectit.hjson"
+      },
+      {
+        "src": "redirectit.js",
+        "dest": "lib/modules/redirectit.js"
+      },
+      {
+        "src": "redirectit.js",
+        "dest": "extensions/server_connect/modules/redirectit.js"
+      },
+      {
+        "src": "redirectit_nav.js",
+        "dest": "extensions/server_connect/routes/redirectit_nav.js"
+      },
+      {
+        "src": "session_json_flush.js",
+        "dest": "extensions/server_connect/routes/session_json_flush.js"
+      }
+    ],
+    "notes": [
+      "Optional: session_json_flush.js \u2014 recommended when login sets req.session and redirects in the same API call.",
+      "In Wappler, open your main layout and add the App Connect Browser component only if you use custom Success handlers with browser.goto (do not paste the div by hand).",
+      "Set the Browser component ID to browser when using browser.goto in custom handlers.",
+      "Quit Wappler completely and restart."
+    ]
+  }
+}
