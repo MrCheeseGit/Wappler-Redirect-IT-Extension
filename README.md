@@ -100,11 +100,11 @@ Run from your **Wappler project root**; skip `git clone` if you already cloned t
 ```bash
 git clone https://github.com/MrCheeseGit/Wappler-Redirect-IT-Extension.git ../Wappler-Redirect-IT-Extension
 
-cp ../Wappler-Redirect-IT-Extension/redirectit.hjson extensions/server_connect/modules/
-cp ../Wappler-Redirect-IT-Extension/redirectit.js lib/modules/
-cp ../Wappler-Redirect-IT-Extension/redirectit.js extensions/server_connect/modules/redirectit.js
-cp ../Wappler-Redirect-IT-Extension/redirectit_nav.js extensions/server_connect/routes/redirectit_nav.js
-cp ../Wappler-Redirect-IT-Extension/session_json_flush.js extensions/server_connect/routes/session_json_flush.js   # optional, recommended for login redirects
+cp ../Wappler-Redirect-IT-Extension/server_connect/modules/redirectit.hjson extensions/server_connect/modules/
+cp ../Wappler-Redirect-IT-Extension/server_connect/modules/redirectit.js lib/modules/
+cp ../Wappler-Redirect-IT-Extension/server_connect/modules/redirectit.js extensions/server_connect/modules/redirectit.js
+cp ../Wappler-Redirect-IT-Extension/server_connect/modules/redirectit_nav.js extensions/server_connect/routes/redirectit_nav.js
+cp ../Wappler-Redirect-IT-Extension/server_connect/modules/session_json_flush.js extensions/server_connect/routes/session_json_flush.js   # optional, recommended for login redirects
 ```
 
 1. Add the **Browser** component to your layout only if you use custom `browser.goto` Success handlers (see [Requirements](#requirements)).

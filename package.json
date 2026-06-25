@@ -1,8 +1,8 @@
 {
   "name": "wappler-redirect-it",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Redirect-IT \u2014 Wappler Server Connect extension to redirect to project pages (routes.json picker) or custom URLs",
-  "main": "redirectit.js",
+  "main": "server_connect/modules/redirectit.js",
   "homepage": "https://www.mrcheese.co.uk",
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
   "license": "SEE LICENSE IN LICENSE",
   "wappler": {
     "module": "redirectit",
-    "version": "1.0.7"
+    "version": "1.0.8"
   }
 }
